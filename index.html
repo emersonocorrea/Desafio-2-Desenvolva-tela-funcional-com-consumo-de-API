@@ -8,6 +8,7 @@
     <!-- CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="src/scripts/tailwindcss.js"></script>
+    
 
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,15 +37,15 @@
                 <input type="text" placeholder="Insira seu e-mail" class="bg-grey1 rounded-md p-2 mb-6">
 
                 <label for="" class="mb-2">Digite o CEP:</label>
-                <input type="text" placeholder="insira o cep" class="bg-grey1 rounded-md p-2 mb-6">
+                <input id="cep" type="number" value="" placeholder="insira o cep" class="bg-grey1 rounded-md p-2 mb-6">
 
                 
                 <label for="" class="text-sm">Digite a latitude e longitude para saber a previsão:</label>
                 <div class="flex gap-2 mt-2">
-                    <input type="text" placeholder="Latitude" class="bg-grey1 rounded-md p-2 mb-6 w-2/4">
-                    <input type="text" placeholder="Longitude" class="bg-grey1 rounded-md p-2 mb-6 w-2/4">
+                    <input  type="text" placeholder="Latitude" class="bg-grey1 rounded-md p-2 mb-6 w-2/4 lat">
+                    <input type="text" placeholder="Longitude" class="bg-grey1 rounded-md p-2 mb-6 w-2/4 long">
                 </div>
-                <button class="bg-primaryBlue text-white rounded-md p-2 font-bold mt-4">Acessar</button>
+                <button id="submit" class="bg-primaryBlue text-white rounded-md p-2 font-bold mt-4">Acessar</button>
             </form>
         </section>
         <section class="mx-auto p-4 mt-10">
@@ -53,15 +54,13 @@
                 <img src="src/assets/img/location.png" alt="" class="w-10 h-10 md:w-20 md:h-20">
             </div>
             <div class="max-w-xl mx-auto rounded-md mt-2">
-                <div class="w-full bg-primaryBlue text-white flex text-sm gap-2 p-2 items-center justify-center md:justify-between md:px-6 rounded-t-md font-bold">
+                <div class="w-full bg-primaryBlue text-white grid grid-cols-3 text-center text-sm gap-2 p-2  md:px-6 rounded-t-md font-bold">
                     <p>Logradouro/nome</p>
                     <p>Bairro/Distrito</p>
                     <p>Localidade/UF</p>
                 </div>
-                <div class="w-full bg-white text-black flex items-center justify-between text-sm p-2 md:px-6 rounded-b-md font-bold">
-                    <p class="">Justino Cobra</p>
-                    <p class="">Vila Ema</p>
-                    <p class="">SP</p>
+                <div class="w-full bg-white text-sm text-black  grid grid-cols-3 text-center text-sm p-2 md:px-6 rounded-b-md font-bold cepArea">
+                    
                 </div>
             </div>
         </section>
@@ -71,12 +70,13 @@
                 <img src="src/assets/img/nuvem2.png" alt="" class="hidden md:block">
             </div>
             <div class="bg-white rounded-2xl p-2 mt-4 text-center">
-                <small class=" font-bold md:text-lg">Previsão de tempo de acordo com a região: 24° C</smal>
+                <small class=" font-bold md:text-lg temp"></smal>
             </div>
 
         </section>
     </main>
     <footer class="h-[80px] bg-primaryBlue mt-10 flex items-center justify-end">
+        
         <small class="text-white mr-4">Termos de Uso | Política de Privacidade</small>
     </footer>
 
